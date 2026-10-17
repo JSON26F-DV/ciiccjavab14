@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
+
+        System.out.print("Enter word: ");
+        sb.append(sc.nextLine().toLowerCase().replaceAll("\\s",""));
+
+        if(sb.toString().contentEquals(sb.reverse()))
+            System.out.println("The input string is a palindrome.");
+        else
+            System.out.println("The input string is not a palindrome.");
+    }
+}
